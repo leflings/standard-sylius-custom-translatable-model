@@ -1,0 +1,18 @@
+app_admin_product_variant_association_type:
+    resource: |
+        alias: app.product_variant_association_type
+        section: admin
+        permission: true
+        except: ['show']
+        templates: SyliusAdminBundle:Crud
+        redirect: update
+        grid: app_admin_product_variant_association_type
+        vars:
+            all:
+                subheader: app.ui.product_variant_association_type
+                templates:
+                    form: "ProductVariantAssociationType/_form.html.twig"
+            index:
+                icon: 'exchange'
+    type: sylius.resource
+    prefix: admin

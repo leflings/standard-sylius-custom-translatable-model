@@ -1,0 +1,14 @@
+sylius_resource:
+    resources:
+        app.product_variant_association_type:
+            driver: doctrine/orm
+            classes:
+                model: App\Entity\ProductVariantAssociationType
+                interface: App\Entity\ProductVariantAssociationTypeInterface
+                factory: Sylius\Component\Resource\Factory\TranslatableFactory
+                form: App\Form\Type\ProductVariantAssociationTypeType
+            translation:
+                classes:
+                    model: App\Entity\ProductVariantAssociationTypeTranslation
+                    interface: App\Entity\ProductVariantAssociationTypeTranslationInterface
+                    form: App\Form\Type\ProductVariantAssociationTypeTranslationType

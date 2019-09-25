@@ -9,6 +9,28 @@ imports:
 parameters:
     sylius_core.public_dir: '%kernel.project_dir%/public'
 
+sylius_grid:
+    grids:
+        app_admin_product_variant_association_type:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: App\Entity\ProductVariantAssociationType
+            fields:
+                name:
+                    type: string
+                    label: sylius.ui.name
+                    sortable: translation.name
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete
+
 sylius_addressing:
     resources:
         address:
