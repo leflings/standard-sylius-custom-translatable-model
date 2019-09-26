@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace App\Form\Type;
 
 use Sylius\Bundle\ResourceBundle\Form\EventSubscriber\AddCodeFormSubscriber;
+use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Sylius\Bundle\ResourceBundle\Form\Type\ResourceTranslationsType;
-use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 
-class ProductVariantAssociationTypeType extends AbstractType
+class ProductVariantAssociationTypeType extends AbstractResourceType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
